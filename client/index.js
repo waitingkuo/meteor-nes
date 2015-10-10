@@ -1,5 +1,11 @@
 if (Meteor.isClient) {
   Template.index.onRendered(function() {
+    console.log('wew');
+    console.log(Streamy.id());
+    Tracker.autorun(function() {
+      console.log('wew2');
+      console.log(Streamy.id());
+    });
     window.nes = new JSNES({
       'ui': $('#emulator').JSNESUI({
         "Homebrew": [
