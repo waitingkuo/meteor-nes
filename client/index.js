@@ -38,15 +38,9 @@ if (Meteor.isClient) {
       "color": "#000000",
       "text": Meteor.absoluteUrl('/player/2/'+connId),
     });
+    $('#player1-link').attr('href', '/player/1/'+connId);
+    $('#player2-link').attr('href', '/player/2/'+connId);
 
-  })
-
-  Template.index.helpers({
-    player1() {
-      return '/player/1/' + Session.get('connectionId');
-    },
-    player2() {
-      return '/player/2/' + Session.get('connectionId');
-    },
   });
+
 }
