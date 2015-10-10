@@ -1,3 +1,6 @@
 [submodule "packages/jsnes/jsnes"]
 	path = packages/jsnes/jsnes
 	url = git@github.com:bfirsh/jsnes.git
+[submodule "packages/joystick/html5-virtual-game-controller"]
+	path = packages/joystick/html5-virtual-game-controller
+	url = git@github.com:austinhallock/html5-virtual-game-controller.git

@@ -4,6 +4,56 @@
   <a href="{{player2}}" target="_blank">Player2</a>
 </template>
 <template name="player">
+  <!--
+  <canvas width="600" height="300"></canvas>
+  -->
+  <!--
   <button class="top">up</button>
   <button class="down">down</button>
+  -->
+  <!--
+  <div id="joystick" style="width:100px; height: 100px; background-color: red;"></div>
+  -->
+  <!--
+  <div id="joystick" style="width:100px; height: 100px; background-color: red;">
+  </div>
+  -->
+  <!--
+  <div id="joystick"></div>
+  <div id="up">^</div>
+  <div id="left">&lt;</div>
+  <div id="right">&gt;</div>
+  <div id="down">v</div>
+  <div id="select">select</div>
+  <div id="start">start</div>
+  <div id="a">A</div>
+  <div id="b">B</div>
+  -->
+
+  <figure id="nespad">
+    <div class="cord"></div>
+    <section class="dpad-pane">
+      <div class="dpad-hole"></div>
+      <div id="dpad">
+        <canvas height="150" id="dpad-body" width="150"></canvas><button class="button" id="up"></button><button class="button" id="right"></button><button class="button" id="down"></button><button class="button" id="left"></button>
+      </div>
+    </section>
+    <section class="menu-pane">
+      <div class="labels">
+        <label class="select" for="select">Select</label><label class="start" for="start">Start</label>
+      </div>
+      <div class="buttons">
+        <button class="button select" id="select">Select</button><button class="button start" id="start">Start</button>
+      </div>
+    </section>
+    <section class="action-pane">
+      <div class="logo">
+        Nintendo
+      </div>
+      <div class="buttons">
+        <label class="label">B<button class="button" id="b"></button></label><label class="label">A<button class="button" id="a"></button></label>
+      </div>
+    </section>
+  </figure>
+
 </template>
