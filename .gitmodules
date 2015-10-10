@@ -1,0 +1,3 @@
+[submodule "packages/jsnes/jsnes"]
+	path = packages/jsnes/jsnes
+	url = git@github.com:bfirsh/jsnes.git
