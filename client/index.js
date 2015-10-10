@@ -31,12 +31,12 @@ if (Meteor.isClient) {
     $('#player1-qrcode').qrcode({
       "size": 100,
       "color": "#000000",
-      "text": "http://192.168.0.103:3000/player/1/"+connId,
+      "text": Meteor.absoluteUrl('/player/1/'+connId),
     });
     $('#player2-qrcode').qrcode({
       "size": 100,
       "color": "#000000",
-      "text": "http://192.168.0.103:3000/player/2/"+connId,
+      "text": Meteor.absoluteUrl('/player/2/'+connId),
     });
 
   })
