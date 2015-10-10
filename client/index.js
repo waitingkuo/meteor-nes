@@ -8,7 +8,7 @@ if (Meteor.isClient) {
         ],
       }),
     })
-    Streamy.on('ready', function() {
+    setTimeout(function() {
       let connId = Streamy.id();
       Session.set('connectionId', connId);
       let ButtonDown = 0x41;
@@ -42,7 +42,7 @@ if (Meteor.isClient) {
       $('#player1-link').attr('href', '/player/1/'+connId);
       $('#player2-link').attr('href', '/player/2/'+connId);
 
-    });
+    }, 2000);
 
   });
 
