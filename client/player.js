@@ -14,6 +14,8 @@ Meteor.startup(function() {
       start: nes.keyboard.keys.KEY_START,
     };
     dpad();
+    let connId = FlowRouter.current().params.connId;
+    let player = parseInt(FlowRouter.current().params.playerId);
     let buttons = ['up', 'down', 'left', 'right', 'select', 'start', 'a', 'b'];
     for (var i in buttons) {
       let button = buttons[i];
@@ -22,31 +24,14 @@ Meteor.startup(function() {
       h.get('tap').set({enable: false})
       h.on("press", function(ev) {
         let key = keyMap[button];
-        let connId = FlowRouter.current().params.connId;
-        Streamy.sessions(connId).emit('keyDown', {key: key});
+        Streamy.sessions(connId).emit('keyDown', {key: key, player:player});
       });
       h.on("pressup", function(ev) {
         let key = keyMap[button];
-        let connId = FlowRouter.current().params.connId;
-        Streamy.sessions(connId).emit('keyUp', {key: key});
+        Streamy.sessions(connId).emit('keyUp', {key: key, player:player});
       });
     }
   });
-  /*
-  Template.player.events({
-    'mousedown .button': function(e) {
-      let key = keyMap[$(e.currentTarget).attr('id')];
-      let connId = FlowRouter.current().params.connId;
-      Streamy.sessions(connId).emit('keyDown', {key: key});
-    },
-    'mouseup .button': function(e) {
-      let key = keyMap[$(e.currentTarget).attr('id')];
-      let connId = FlowRouter.current().params.connId;
-      //FIXME fix keyup too soon problem
-      Streamy.sessions(connId).emit('keyUp', {key: key});
-    },
-  });
-  */
   
 
 

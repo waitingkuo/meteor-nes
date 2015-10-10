@@ -13,12 +13,18 @@ if (Meteor.isClient) {
     let ButtonDown = 0x41;
     let ButtonUp = 0x40;
     Streamy.on('keyDown', function(data) {
-      //nes.keyboard.state1[nes.keyboard.keys.KEY_DOWN] = ButtonUp;
-      nes.keyboard.state1[data.key] = ButtonDown;
+      if (data.player == 1) {
+        nes.keyboard.state1[data.key] = ButtonDown;
+      } else if (data.player == 2) {
+        nes.keyboard.state2[data.key] = ButtonDown;
+      }
     });
     Streamy.on('keyUp', function(data) {
-      //nes.keyboard.state1[nes.keyboard.keys.KEY_DOWN] = ButtonUp;
-      nes.keyboard.state1[data.key] = ButtonUp;
+      if (data.player == 1) {
+        nes.keyboard.state1[data.key] = ButtonUp;
+      } else if (data.player == 2) {
+        nes.keyboard.state2[data.key] = ButtonUp;
+      }
     });
 
 
