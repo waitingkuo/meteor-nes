@@ -1,14 +1,35 @@
 <template name="index">
   <div class="container">
-  <div id="emulator"></div>
-  <div>
-    <a href="{{player1}}" target="_blank">Player1</a>
-    <div id="player1-qrcode"></div>
-  </div>
-  <div>
-    <a href="{{player2}}" target="_blank">Player2</a>
-    <div id="player2-qrcode"></div>
-  </div>
+    <h1 class="text-center">Meteor NES</h1>
+    <div id="emulator" style="text-align: center"></div>
+    <div class="row">
+      <div class="col-lg-6" style="text-align:center;">
+        <a href="{{player1}}" target="_blank">Player1</a>
+        <div id="player1-qrcode"></div>
+      </div>
+      <div class="col-lg-6" style="text-align:center;">
+        <a href="{{player2}}" target="_blank">Player2</a>
+        <div id="player2-qrcode"></div>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row">
+      <div class="text-center">
+      <p>step1: Select a ROM</p>
+      <p>step2: Use your smartphone to scan the QR-Code to get the joystick</p>
+      <p>step3: Turn your phone horizontal, zoom-in/zoom-out if needed</p>
+      <p>step4: Enjoy</p>
+      <br/>
+      <p> 
+        The Awesome JS NES emulator is from <a target="_blank" href="https://github.com/bfirsh/jsnes">https://github.com/bfirsh/jsnes</a>
+      </p>
+      <p>
+        The Cool NES Controller is from <a target="_blank" href="http://codepen.io/fullkornslimpa/pen/jxiHd/">http://codepen.io/fullkornslimpa/pen/jxiHd/</a>
+      </p>
+      </div>
+    </div>
   </div>
 </template>
 <template name="player">
