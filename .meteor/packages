@@ -21,5 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 jsnes
 kadira:flow-router
 kadira:blaze-layout
-keypress:keypress
 yuukan:streamy
