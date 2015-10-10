@@ -14,8 +14,25 @@ Meteor.startup(function() {
       start: nes.keyboard.keys.KEY_START,
     };
     dpad();
-
+    let buttons = ['up', 'down', 'left', 'right', 'select', 'start', 'a', 'b'];
+    for (var i in buttons) {
+      let button = buttons[i];
+      let  h = new Hammer(document.getElementById(button));
+      h.get('press').set({time: 0})
+      h.get('tap').set({enable: false})
+      h.on("press", function(ev) {
+        let key = keyMap[button];
+        let connId = FlowRouter.current().params.connId;
+        Streamy.sessions(connId).emit('keyDown', {key: key});
+      });
+      h.on("pressup", function(ev) {
+        let key = keyMap[button];
+        let connId = FlowRouter.current().params.connId;
+        Streamy.sessions(connId).emit('keyUp', {key: key});
+      });
+    }
   });
+  /*
   Template.player.events({
     'mousedown .button': function(e) {
       let key = keyMap[$(e.currentTarget).attr('id')];
@@ -29,6 +46,7 @@ Meteor.startup(function() {
       Streamy.sessions(connId).emit('keyUp', {key: key});
     },
   });
+  */
   
 
 

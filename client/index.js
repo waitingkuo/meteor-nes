@@ -20,6 +20,19 @@ if (Meteor.isClient) {
       //nes.keyboard.state1[nes.keyboard.keys.KEY_DOWN] = ButtonUp;
       nes.keyboard.state1[data.key] = ButtonUp;
     });
+
+
+    $('#player1-qrcode').qrcode({
+      "size": 100,
+      "color": "#000000",
+      "text": "http://192.168.0.103:3000/player/1/"+connId,
+    });
+    $('#player2-qrcode').qrcode({
+      "size": 100,
+      "color": "#000000",
+      "text": "http://192.168.0.103:3000/player/2/"+connId,
+    });
+
   })
 
   Template.index.helpers({

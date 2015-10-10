@@ -22,3 +22,6 @@ jsnes
 kadira:flow-router
 kadira:blaze-layout
 yuukan:streamy
+steeve:jquery-qrcode
+fastclick
+chriswessels:hammer
