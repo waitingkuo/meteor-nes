@@ -42,10 +42,26 @@ if (Meteor.isClient) {
       Session.set('connectionId', connId);
       let ButtonDown = 0x41;
       let ButtonUp = 0x40;
+      let arrowKeys = [
+         nes.keyboard.keys.KEY_UP,
+         nes.keyboard.keys.KEY_DOWN,
+         nes.keyboard.keys.KEY_LEFT,
+         nes.keyboard.keys.KEY_RIGHT,
+      ];
       Streamy.on('keyDown', function(data) {
         if (data.player == 1) {
+          if (arrowKeys.indexOf(data.key) != -1) {
+            for (let i in arrowKeys) {
+              nes.keyboard.state1[arrowKeys[i]] = ButtonUp;
+            }
+          }
           nes.keyboard.state1[data.key] = ButtonDown;
         } else if (data.player == 2) {
+          if (arrowKeys.indexOf(data.key) != -1) {
+            for (let i in arrowKeys) {
+              nes.keyboard.state1[arrowKeys[i]] = ButtonUp;
+            }
+          }
           nes.keyboard.state2[data.key] = ButtonDown;
         }
       });
