@@ -2,7 +2,7 @@
 
 A Nintendo Entertainment System Emulator on Brower. Any smartphone can join as a Joystick!
 
-<https://www.youtube.com/upload>
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/oBXW0tK7U_s/0.jpg)](http://www.youtube.com/watch?v=oBXW0tK7U_s)
 
 ### DEMO
 
