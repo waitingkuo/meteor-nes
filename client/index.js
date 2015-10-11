@@ -38,12 +38,12 @@ if (Meteor.isClient) {
       $('#player1-qrcode').qrcode({
         "size": 100,
         "color": "#000000",
-        "text": Meteor.absoluteUrl('/player/1/'+connId),
+        "text": Meteor.absoluteUrl('player/1/'+connId),
       });
       $('#player2-qrcode').qrcode({
         "size": 100,
         "color": "#000000",
-        "text": Meteor.absoluteUrl('/player/2/'+connId),
+        "text": Meteor.absoluteUrl('player/2/'+connId),
       });
       $('#player1-link').attr('href', '/player/1/'+connId);
       $('#player2-link').attr('href', '/player/2/'+connId);
