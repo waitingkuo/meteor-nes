@@ -172,12 +172,13 @@ body { font: 15px/2 nescontroller,sans-serif; }
       #dpad .button {
         position: absolute;
         z-index: 2;
-        width: 2em;
-        height: 2em;
+        width: 4em;
+        height: 4em;
         background-color: rgba(0, 0, 0, 0); /* "transparent" buttons in ie9 aren't clickable, but rgba can be used */
         border: none;
         padding: 0;
       }
+      /*
       #dpad .button:before {
         content: "";
         display: block;
@@ -199,23 +200,30 @@ body { font: 15px/2 nescontroller,sans-serif; }
         border-width: .1em;
         border-style: solid;
       }
-      #up { top: -2.7em; }
+      */
+      #up { 
+        top: -3.7em;
+        left: -0.6em;
+      }
         #up:before { border-color: #151515 #444 transparent transparent; }
         #up:after { border-color: transparent #444 #444 #151515; }
       #right {
-        left: 2.7em;
+        left: 2.4em;
+        top: -0.7em;
         transform: rotate(90deg);
       }
         #right:before { border-color: #444 #444 transparent transparent; }
         #right:after { border-color: transparent #444 #151515 #151515; }
       #down {
-        top: 2.7em;
+        top: 1.8em;
+        left: -0.6em;
         transform: rotate(180deg);
       }
         #down:before { border-color: #444 #151515 transparent transparent; }
         #down:after { border-color: transparent #151515 #151515 #444; }
       #left {
-        left: -2.7em;
+        left: -3.7em;
+        top: -0.7em;
         transform: rotate(270deg);
       }
         #left:before { border-color: #444 #151515 transparent transparent; }
@@ -295,6 +303,9 @@ body { font: 15px/2 nescontroller,sans-serif; }
   .start { float: right; }
   .select { float: left; }
 
+.action-pane .buttons {
+  margin-top: -0.5em;
+}
 .action-pane {
   display: inline-block;
   vertical-align: top;
@@ -313,19 +324,19 @@ body { font: 15px/2 nescontroller,sans-serif; }
     display: inline-block;
     background-color: #ddd;
     border-radius: 0.4rem;
-    width: 4rem;
-    height: 4rem;
+    width: 7rem;
+    height: 7rem;
     margin-left: .8rem;
     text-align: right;
-    line-height: 6.1em;
+    line-height: 11.1em;
     position: relative;
     font-size: 1.5rem; }
     .action-pane .button {
       position: absolute;
-      top: .02rem;
-      left: .22rem;
-      width: 3.2rem;
-      height: 3.2rem;
+      top: .62rem;
+      left: .62rem;
+      width: 5.2rem;
+      height: 5.2rem;
       background: #E0421B; /* fallack */
       background: -webkit-radial-gradient(35% 35%, circle closest-corner, #ff8957, #E0421B 100%);
       background: -moz-radial-gradient(35% 35%, circle closest-corner, #ff8957, #E0421B 100%);
@@ -344,8 +355,8 @@ body { font: 15px/2 nescontroller,sans-serif; }
         1.2em .6em .5em rgba(0, 0, 0, .3);
     }
     .action-pane .button:active {
-      top: .40rem;
-      left: .35rem;
+      top: .80rem;
+      left: .95rem;
       box-shadow:
         2em 1em 0.2em 0 hsla(10, 90%, 45%, .5) inset, /* reflection */
         .05em .1em 0 hsla(10,90%,30%,1), /* 3d */
